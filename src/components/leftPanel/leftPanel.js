@@ -6,7 +6,9 @@ import Button from '@material-ui/core/Button';
 import { appContext } from '../../contextApi';
 import './leftPanel.css';
 
-const LeftPanel = ({left, users, removeUser, widthScreen, heightScreen, setOpenLeft, setOpenModal, showSubject}) => {
+const LeftPanel = ({left, users, removeUser, 
+                    widthScreen, heightScreen, setOpenLeft, 
+                    setOpenModal, showSubject}) => {
 
     const state = useContext(appContext);
     const { subjects } = state;
@@ -16,7 +18,7 @@ const LeftPanel = ({left, users, removeUser, widthScreen, heightScreen, setOpenL
             <div className={`${widthScreen > 600 ? "panel-title-web" : "panel-title-mobile"}`}>
                 <div>Materias</div>
                 <div style={{marginRight:"15px"}}>
-                    <Button variant="outlined" color="primary" onClick={() => setOpenLeft()}>
+                    <Button variant="outlined" color="primary" onClick={setOpenLeft}>
                         <DehazeIcon />
                     </Button>
                 </div>
