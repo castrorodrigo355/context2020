@@ -1,0 +1,81 @@
+/* PANEL */
+.panel-container-web{
+    background: #8a0606;
+    color: #f0e9e9;
+    width: 35%;
+    height: 100%;
+    left: -35%;
+    position: absolute;
+    transition: all 0.3s;
+    text-align: center;
+    
+}
+
+.panel-container-web.open{
+    left: 0px;
+}
+
+.panel-container-mobile{
+    background: #032672;
+    color: #ffffff;
+    width: 70%;
+    height: 100%;
+    left: -70%;
+    position: absolute;
+    transition: all 0.3s;
+    text-align: center;
+    
+}
+
+.panel-container-mobile.open{
+    left: 0px;
+}
+/* PANEL */
+
+/* TITLE */
+.panel-title-web{
+    font-family: cursive;
+}
+
+.panel-title-mobile{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1.3rem;
+    font-family: cursive;
+    font-size: 8vw;
+}
+
+/* TITLE */
+
+/* ITEM */
+.panel-item-web{
+    display: flex;
+    align-items: flex-start;
+    background: #b11111;
+    margin: 5%;
+    font-family: cursive;
+    font-size: 120%;
+    border-radius: 70px;
+}
+
+.panel-item-web:hover{
+    background: #e6bcbc;
+}
+
+.panel-item-mobile{
+    display: flex;
+    justify-content: space-between;
+    background: #0330ace5;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5%;
+    font-family: cursive;
+    font-size: 6vw;
+    font-size: 20px;
+    border-radius: 70px;
+}
+
+/* .panel-item-mobile:hover{
+    background: #3866e4e5;
+} */
+/* ITEM */

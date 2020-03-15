@@ -1,0 +1,14 @@
+.panel-right{
+    background: #799ce8;
+    color: #f5f0f0;
+    width: 450px;
+    right: -450px;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.panel-right.open{
+    right: 0px;   
+}
