@@ -4,7 +4,7 @@ import MapLeaflet from "../map/map";
 import LeftPanel from "../leftPanel/leftPanel";
 import DrawerRight from "../drawerRight/drawerRight";
 import Modal from "../modal/modal";
-import FloatingButton from '../floatingButton/floatingButton';
+import SocialNetsButton from '../socialNetsButton/socialNetsButton';
 // import state from "./reducer";
 import '../../App.css';
 
@@ -23,7 +23,7 @@ const Home = () => {
         getUsers();
     }, []);
 
-    const[left, setLeft] = useState(true);
+    const[left, setLeft] = useState(false);
     const[right, setRight] = useState(false);
     const[openModal, setOpen] = useState(false);
 
@@ -72,7 +72,7 @@ const Home = () => {
                         removeUser={removeUser} setOpenLeft={setOpenLeft}
                         setOpenModal={setOpenModal} showSubject={showSubject}
                         widthScreen={dimensions.width} heightScreen={dimensions.height}/>
-            <FloatingButton left={left} setOpenLeft={setOpenLeft}/>
+            <SocialNetsButton left={left} setOpenLeft={setOpenLeft}/>
         </div>
     )
 }
