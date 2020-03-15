@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-// import { Provider } from "./contextApi";
 import MapLeaflet from "../map/map";
 import LeftPanel from "../leftPanel/leftPanel";
 import DrawerRight from "../drawerRight/drawerRight";
 import Modal from "../modal/modal";
 import SocialNetsButton from '../socialNetsButton/socialNetsButton';
-// import state from "./reducer";
 import '../../App.css';
+import FloatingButton from '../floatingButton/floatingButton';
+import LeftPanelButton from '../leftPanelButton/leftPanelButton';
 
 const Home = () => {
 
@@ -62,17 +62,20 @@ const Home = () => {
 
     console.log(dimensions);
 
-    const[selectedSubject, setSelectedSubject] = useState("");
+    const[selectedSubject, setSelectedSubject] = useState("Rodri Clases");
 
-    const showSubject = subject => setSelectedSubject(subject);
+    const showSubject = subject => setSelectedSubject(subject.name);
 
     return (
         <div className="App">
+            <LeftPanelButton setOpenLeft={setOpenLeft}/>
             <LeftPanel  left={left} users={users} 
                         removeUser={removeUser} setOpenLeft={setOpenLeft}
                         setOpenModal={setOpenModal} showSubject={showSubject}
                         widthScreen={dimensions.width} heightScreen={dimensions.height}/>
-            <SocialNetsButton left={left} setOpenLeft={setOpenLeft}/>
+            <Modal open={openModal} handleClose={setOpenModal} selectedSubject={selectedSubject}/>
+            <SocialNetsButton />
+            <FloatingButton setOpenModal={setOpenModal}/>
         </div>
     )
 }

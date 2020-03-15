@@ -1,0 +1,8 @@
+.button-left{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    background: rgb(13, 76, 212);
+    color: rgb(255, 255, 255);
+    border-radius: 60px;
+}

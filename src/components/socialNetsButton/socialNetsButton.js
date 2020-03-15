@@ -7,7 +7,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import './socialNetsButton.css';
 
-const SocialNetsButton = ({setOpenLeft}) => {
+const SocialNetsButton = () => {
 
     const[panelFloating, setPanelFloating] = useState(false);
 
@@ -19,10 +19,7 @@ const SocialNetsButton = ({setOpenLeft}) => {
         {icon: FacebookIcon, className: `fab facebookIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => console.log("FACEBOOK")}
     ]
 
-    const handlePanel = () => {
-        setPanelFloating(c => !c);
-        setOpenLeft();
-    }
+    const handlePanel = () => setPanelFloating(!panelFloating);
 
     return (
         <div className="social-nets-container">

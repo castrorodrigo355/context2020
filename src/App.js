@@ -1,12 +1,9 @@
 import React from 'react';
 import { Provider } from "./contextApi";
 import Home from './components/home/home';
-// import MapLeaflet from "./components/map/map";
-// import LeftPanel from "./components/leftPanel/leftPanel";
-// import DrawerRight from "./components/drawerRight/drawerRight";
-// import Modal from "./components/modal/modal";
 import state from "./reducer";
-// import './App.css';
+// import MapLeaflet from "./components/map/map";
+// import DrawerRight from "./components/drawerRight/drawerRight";
 
 const App = () => {
 
@@ -17,7 +14,6 @@ const App = () => {
                   setOpenLeft={setOpenLeft} 
                   setOpenRight={setOpenRight}
                   setOpenModal={setOpenModal} /> */}
-      {/* <Modal open={openModal} handleClose={setOpenModal} selectedSubject={selectedSubject}/> */}
       {/* 
       <DrawerRight right={right} onAddUser={onAddUser} /> 
       */}

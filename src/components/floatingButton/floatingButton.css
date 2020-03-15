@@ -1,0 +1,8 @@
+.floating-button-container{
+    position: absolute;
+    bottom: 5px;
+    right: 12px;
+    background: rgb(170, 0, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 60px;
+}

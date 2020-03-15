@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
             border: '2px solid #000',
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
+            height: "350px"
         },
     }));
 
@@ -35,8 +36,8 @@ const ModalService = ({open, handleClose, selectedSubject}) => {
         >
             <Fade in={open}>
                 <div className={classes.paper}>
-                    <h2 id="transition-modal-title">Transition modal</h2>
-                    <p id="transition-modal-description">{selectedSubject.title}</p>
+                    <h2 id="transition-modal-title">Informacion Util</h2>
+                    <p id="transition-modal-description">{selectedSubject}</p>
                 </div>
             </Fade>
         </Modal>
