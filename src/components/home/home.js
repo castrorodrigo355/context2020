@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import MapLeaflet from "../map/map";
 import LeftPanel from "../leftPanel/leftPanel";
 import DrawerRight from "../drawerRight/drawerRight";
 import Modal from "../modal/modal";
@@ -7,6 +6,7 @@ import SocialNetsButton from '../socialNetsButton/socialNetsButton';
 import '../../App.css';
 import FloatingButton from '../floatingButton/floatingButton';
 import LeftPanelButton from '../leftPanelButton/leftPanelButton';
+import MapLeaflet from '../map/map';
 
 const Home = () => {
 
@@ -68,11 +68,13 @@ const Home = () => {
 
     return (
         <div className="App">
-            <LeftPanelButton setOpenLeft={setOpenLeft}/>
+            <LeftPanelButton left={left} setOpenLeft={setOpenLeft}/>
+            {/* <DrawerRight/> */}
             <LeftPanel  left={left} users={users} 
                         removeUser={removeUser} setOpenLeft={setOpenLeft}
                         setOpenModal={setOpenModal} showSubject={showSubject}
                         widthScreen={dimensions.width} heightScreen={dimensions.height}/>
+            <MapLeaflet/>
             <Modal open={openModal} handleClose={setOpenModal} selectedSubject={selectedSubject}/>
             <SocialNetsButton />
             <FloatingButton setOpenModal={setOpenModal}/>

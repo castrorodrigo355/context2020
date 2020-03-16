@@ -10,13 +10,6 @@ const App = () => {
   return (
     <Provider value = {state}>
       <Home/>
-      {/* <MapLeaflet left={left} right={right}
-                  setOpenLeft={setOpenLeft} 
-                  setOpenRight={setOpenRight}
-                  setOpenModal={setOpenModal} /> */}
-      {/* 
-      <DrawerRight right={right} onAddUser={onAddUser} /> 
-      */}
     </Provider>
   );
 }

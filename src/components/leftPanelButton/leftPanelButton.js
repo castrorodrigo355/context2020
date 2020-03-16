@@ -1,16 +1,17 @@
 import React from 'react';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import "./leftPanelButton.css"
 
-const LeftPanelButton = ({setOpenLeft}) => {
+const LeftPanelButton = ({left, setOpenLeft}) => {
 
     return (
-        <div className="button-left"
+        <div className="button-left2"
              onClick={() => setOpenLeft()}
         >
             <IconButton color="inherit">
-                <ChevronRightIcon/>
+                {left ? <ChevronLeftIcon/> : <ChevronRightIcon/>}
             </IconButton>
         </div>
     )

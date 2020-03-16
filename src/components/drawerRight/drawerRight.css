@@ -1,14 +1,9 @@
 .panel-right{
-    background: #799ce8;
-    color: #f5f0f0;
-    width: 450px;
-    right: -450px;
-    height: 100%;
     position: absolute;
-    transition: all 0.3s;
-    text-align: center;
-}
-
-.panel-right.open{
-    right: 0px;   
+    z-index: 1;
+    top: 10px;
+    left: 12px;
+    background: rgb(170, 0, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 60px;
 }

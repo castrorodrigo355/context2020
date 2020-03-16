@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import DehazeIcon from '@material-ui/icons/Dehaze';
-import IconButton from '@material-ui/core/IconButton';
-import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import { appContext } from '../../contextApi';
 import './leftPanel.css';
@@ -22,13 +20,6 @@ const LeftPanel = ({left, users, removeUser,
                         <DehazeIcon />
                     </Button>
                 </div>
-                
-                {/* <button style={{color:"white", marginRight:"15px", paddingTop:"10px"}}
-                        onClick={() => setOpenLeft()}>
-                    <IconButton aria-label="">
-                        <DehazeIcon />
-                    </IconButton>
-                </button> */}
             </div>
             <hr/>
             {subjects.map((s, i) => <Subject key={i} subject={s} widthScreen={widthScreen} 
