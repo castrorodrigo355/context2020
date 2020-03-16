@@ -1,15 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import Button from '@material-ui/core/Button';
-import { appContext } from '../../contextApi';
 import './leftPanel.css';
 
-const LeftPanel = ({left, users, removeUser, 
-                    widthScreen, heightScreen, setOpenLeft, 
-                    setOpenModal, showSubject}) => {
-
-    const state = useContext(appContext);
-    const { subjects } = state;
+const LeftPanel = ({left, widthScreen, heightScreen, subjects,
+                    setOpenLeft, setOpenModal, showSubject}) => {
         
     return (
         <div className={`${widthScreen > 600 ? "panel-container-web" : "panel-container-mobile"} ${left ? "open" : ""}`}>

@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import LeftPanel from "../leftPanel/leftPanel";
 import DrawerRight from "../drawerRight/drawerRight";
 import Modal from "../modal/modal";
 import SocialNetsButton from '../socialNetsButton/socialNetsButton';
-import '../../App.css';
 import FloatingButton from '../floatingButton/floatingButton';
 import LeftPanelButton from '../leftPanelButton/leftPanelButton';
 import MapLeaflet from '../map/map';
+import { appContext } from '../../contextApi';
+import '../../App.css';
 
 const Home = () => {
 
-    const[users, setUsers] = useState([]);
-    useEffect(() => {
-        async function getUsers(){
-            const res = await fetch('https://jsonplaceholder.typicode.com/users');
-            const list = await res.json();
-            const response = list.slice(0, 3);
-            setUsers(response.map(r => {
-            return {id: r.id, name: r.name, email: r.email, site: r.website}
-            }));
-        }
-        getUsers();
-    }, []);
+    const state = useContext(appContext);
+    const { subjects, courses } = state;
 
     const[left, setLeft] = useState(false);
     const[right, setRight] = useState(false);
@@ -30,15 +21,6 @@ const Home = () => {
     const setOpenLeft = () => setLeft(c => !c);
     const setOpenRight = () => setRight(!right);
     const setOpenModal = () => setOpen(!openModal);
-
-    const onAddUser = user => {
-        const { name, email, site } = user;
-        const lengthUsers = users.length;
-        const newUser = {id: lengthUsers, name, email, site};
-        setUsers([...users, newUser]);
-    }
-
-    const removeUser = index => setUsers(users.filter((user, i) => i !== index));
 
     const [dimensions, setDimensions] = React.useState({
         height: window.innerHeight,
@@ -60,22 +42,25 @@ const Home = () => {
         };
     });
 
-    console.log(dimensions);
+    const[selectedCourse, setSelectedCourse] = useState(null);
 
-    const[selectedSubject, setSelectedSubject] = useState("Rodri Clases");
-
-    const showSubject = subject => setSelectedSubject(subject.name);
+    const showSubject = subject => {
+        const myCourse = courses.find(c => c.id === subject.id);
+        if(!myCourse){
+            setSelectedCourse(null);    
+        }else{
+            setSelectedCourse(myCourse);
+        }
+    }
 
     return (
         <div className="App">
             <LeftPanelButton left={left} setOpenLeft={setOpenLeft}/>
-            {/* <DrawerRight/> */}
-            <LeftPanel  left={left} users={users} 
-                        removeUser={removeUser} setOpenLeft={setOpenLeft}
+            <LeftPanel  left={left} subjects={subjects} setOpenLeft={setOpenLeft}
                         setOpenModal={setOpenModal} showSubject={showSubject}
                         widthScreen={dimensions.width} heightScreen={dimensions.height}/>
             <MapLeaflet/>
-            <Modal open={openModal} handleClose={setOpenModal} selectedSubject={selectedSubject}/>
+            <Modal open={openModal} handleClose={setOpenModal} selectedCourse={selectedCourse}/>
             <SocialNetsButton />
             <FloatingButton setOpenModal={setOpenModal}/>
         </div>

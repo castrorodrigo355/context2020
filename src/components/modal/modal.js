@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import "./modal.css"
 
 const useStyles = makeStyles(theme => ({
         modal: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme => ({
         },
     }));
 
-const ModalService = ({open, handleClose, selectedSubject}) => {
+const ModalService = ({open, handleClose, selectedCourse}) => {
 
     const classes = useStyles();
 
@@ -36,8 +37,18 @@ const ModalService = ({open, handleClose, selectedSubject}) => {
         >
             <Fade in={open}>
                 <div className={classes.paper}>
-                    <h2 id="transition-modal-title">Informacion Util</h2>
-                    <p id="transition-modal-description">{selectedSubject}</p>
+                    {selectedCourse && <h2 id="transition-modal-title">{`Materia: ${selectedCourse.name}`}</h2>}
+                    {selectedCourse && <p id="transition-modal-description">{`Tiempo Estimado: ${selectedCourse.hours} Horas`}</p>}
+                    {
+                        selectedCourse && 
+                        selectedCourse.classes.map((c, i) => {
+                            return(
+                                <div className="item-class" key={i}>
+                                    {c.topic}
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </Fade>
         </Modal>
