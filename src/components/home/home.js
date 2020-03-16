@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import LeftPanel from "../leftPanel/leftPanel";
-import DrawerRight from "../drawerRight/drawerRight";
 import Modal from "../modal/modal";
 import SocialNetsButton from '../socialNetsButton/socialNetsButton';
 import FloatingButton from '../floatingButton/floatingButton';
@@ -15,11 +14,9 @@ const Home = () => {
     const { subjects, courses } = state;
 
     const[left, setLeft] = useState(false);
-    const[right, setRight] = useState(false);
     const[openModal, setOpen] = useState(false);
 
     const setOpenLeft = () => setLeft(c => !c);
-    const setOpenRight = () => setRight(!right);
     const setOpenModal = () => setOpen(!openModal);
 
     const [dimensions, setDimensions] = React.useState({

@@ -1,9 +1,0 @@
-.panel-right{
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 12px;
-    background: rgb(170, 0, 255);
-    color: rgb(255, 255, 255);
-    border-radius: 60px;
-}
