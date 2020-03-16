@@ -5,13 +5,11 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 // import { faBeer } from '@fortawesome/free-solid-svg-icons'
 import './floatingButton.css';
 
-const FloatingButton = ({setOpenModal}) => {
-
-    const handleFloatingButton = () => setOpenModal();
+const FloatingButton = ({setOpenProfile}) => {
 
     return (
         <div className="floating-button-container"
-             onClick={() => handleFloatingButton()}
+             onClick={setOpenProfile}
         >
             <IconButton color="inherit">
                 <AccountCircleIcon/>

@@ -11,19 +11,65 @@ import Filter9Icon from '@material-ui/icons/Filter9';
 
 const state = {
 
+    profileMessage: {
+        title: "Rodrigo Clases",
+        subtitle: "Modalidad De Clases",
+        topics: [
+            "Clases Intensivas de 2 o 3 Horas",
+            "Un Tema Por Clase",
+            "Explicación Y Práctica De Finales",
+            "Consultas Por Whatsapp"
+        ]
+    }
+    ,
     subjects: [
-        { id: 1, name: "ingreso" , title: "Ingreso UTN", icon: Filter1Icon, time: "(20)" },
-        { id: 2, name: "discreta" , title: "Discreta", icon: Filter2Icon, time: "(18)" },
+        { id: 1, name: "ingreso" , title: "Ingreso UTN", icon: Filter1Icon, time: "(40)" },
+        { id: 2, name: "biofisica CBC" , title: "Biofísica CBC", icon: Filter2Icon, time: "(20)" },
         { id: 3, name: "algoritmos" , title: "Algoritmos", icon: Filter3Icon, time: "(25)" },
-        { id: 4, name: "algebra1" , title: "Algebra 1", icon: Filter4Icon, time: "(18)" },
-        { id: 5, name: "algebra2" , title: "Algebra 2", icon: Filter5Icon, time: "(18)" },
-        { id: 6, name: "analisis1" , title: "Análisis 1", icon: Filter6Icon, time: "(18)" },
-        { id: 7, name: "analisis2" , title: "Análisis 2", icon: Filter7Icon, time: "(20)" },
-        { id: 8, name: "fisica 1" , title: "Física 1", icon: Filter8Icon, time: "(18)" },
-        { id: 9, name: "fisica 2" , title: "Física 2", icon: Filter9Icon, time: "(22)" }
+        { id: 4, name: "algebra" , title: "Algebra", icon: Filter4Icon, time: "(18)" },
+        { id: 5, name: "analisis1" , title: "Análisis 1", icon: Filter6Icon, time: "(18)" },
+        { id: 6, name: "analisis2" , title: "Análisis 2", icon: Filter7Icon, time: "(20)" },
+        { id: 7, name: "fisica 1" , title: "Física 1", icon: Filter8Icon, time: "(18)" },
+        { id: 8, name: "fisica 2" , title: "Física 2", icon: Filter9Icon, time: "(22)" }
     ],
 
     courses: [
+        { id: 1, hours: 40, name: "Ingreso UTN", classes: [
+            { id: 1, topic: "Estudio Y Gráfico De Funciones"},
+            { id: 3, topic: "Sistema De Ecuaciones"},
+            { id: 2, topic: "Polinomios De Distinto Grado"},
+            { id: 4, topic: "Geometría Del Plano"},
+            { id: 5, topic: "Geometría Del Espacio"},
+            { id: 6, topic: "Integración De Conceptos"},
+            { id: 7, topic: "Cinemática (1da Parte)"},
+            { id: 8, topic: "Cinemática (2da Parte)"},
+            { id: 9, topic: "Estática 1 (Fuerzas Newtonianas)"},
+            { id: 10, topic: "Estática 2 (Fuerzas Newtonianas)"}]}
+        ,
+        { id: 2, hours: 20, name: "Biofísica CBC", classes: [
+            { id: 1, topic: "Cinemática"},
+            { id: 2, topic: "Dinámica"},
+            { id: 3, topic: "Energía Mecánica"},
+            { id: 4, topic: "Elasticidad"},
+            { id: 5, topic: "Corriente Continua"},
+            { id: 6, topic: "Electrostática (Campo Eléctrico)"},
+            { id: 7, topic: "Electrostática (Potencial)"},
+            { id: 8, topic: "Calorimetria/ Transferencia De Calor"},
+            { id: 9, topic: "Principios De Termodinámica"},
+            { id: 10, topic: "Hidrostática/ Hidrodinámica"}]}
+        ,
+        { id: 4, hours: 20, name: "Algebra", classes: [
+            { id: 1, topic: "Numeros Complejos"},
+            { id: 2, topic: "Rectas En El Plano (R2)"},
+            { id: 3, topic: "Rectas En El Espacio (R3)"},
+            { id: 4, topic: "Matrices Y Determinantes"},
+            { id: 5, topic: "Espacios Vectoriales"},
+            { id: 6, topic: "Transformaciones Lineales (Parte 1)"},
+            { id: 7, topic: "Transformaciones Lineales (Parte 2)"},
+            { id: 8, topic: "Conicas (Circulos, Elipses, Parábolas)"},
+            { id: 9, topic: "Autovalores/ Autovectores/ Superficies"},
+            { id: 10, topic: "Rototraslacion"}]}
+        ,
         { id: 7, hours: 20, name: "Análisis 2", classes: [
             { id: 1, topic: "Ecuaciones Diferenciales/ Curvas"},
             { id: 2, topic: "Limites Y Derivadas en R2"},

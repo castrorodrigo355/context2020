@@ -1,23 +1,28 @@
 import React, { useState, useContext } from 'react';
+import { appContext } from '../../contextApi';
 import LeftPanel from "../leftPanel/leftPanel";
-import Modal from "../modal/modal";
-import SocialNetsButton from '../socialNetsButton/socialNetsButton';
+import ModalDetails from "../modalDetails/modalDetails";
 import FloatingButton from '../floatingButton/floatingButton';
 import LeftPanelButton from '../leftPanelButton/leftPanelButton';
+import SocialNetsButton from '../socialNetsButton/socialNetsButton';
 import MapLeaflet from '../map/map';
-import { appContext } from '../../contextApi';
 import '../../App.css';
+import ModalProfile from '../modalProfile/modalProfile';
 
 const Home = () => {
 
     const state = useContext(appContext);
-    const { subjects, courses } = state;
+    const { subjects, courses, profileMessage } = state;
 
     const[left, setLeft] = useState(false);
-    const[openModal, setOpen] = useState(false);
 
     const setOpenLeft = () => setLeft(c => !c);
-    const setOpenModal = () => setOpen(!openModal);
+
+    const[openModalDetails, setOpenModalDetails] = useState(false);
+    const setOpenDetails = () => setOpenModalDetails(!openModalDetails);
+
+    const[openModalProfile, setOpenModalProfile] = useState(false);
+    const setOpenProfile = () => setOpenModalProfile(!openModalProfile);
 
     const [dimensions, setDimensions] = React.useState({
         height: window.innerHeight,
@@ -43,23 +48,28 @@ const Home = () => {
 
     const showSubject = subject => {
         const myCourse = courses.find(c => c.id === subject.id);
-        if(!myCourse){
-            setSelectedCourse(null);    
-        }else{
-            setSelectedCourse(myCourse);
-        }
+        !myCourse ? setSelectedCourse(null) : setSelectedCourse(myCourse);
     }
 
     return (
         <div className="App">
             <LeftPanelButton left={left} setOpenLeft={setOpenLeft}/>
-            <LeftPanel  left={left} subjects={subjects} setOpenLeft={setOpenLeft}
-                        setOpenModal={setOpenModal} showSubject={showSubject}
-                        widthScreen={dimensions.width} heightScreen={dimensions.height}/>
+            <LeftPanel  left={left} 
+                        subjects={subjects} 
+                        setOpenLeft={setOpenLeft}
+                        setOpenDetails={setOpenDetails} 
+                        showSubject={showSubject}
+                        widthScreen={dimensions.width} 
+                        heightScreen={dimensions.height}/>
             <MapLeaflet/>
-            <Modal open={openModal} handleClose={setOpenModal} selectedCourse={selectedCourse}/>
+            <ModalDetails   openModalDetails={openModalDetails} 
+                            handleClose={setOpenDetails} 
+                            selectedCourse={selectedCourse}/>
+            <ModalProfile   profileMessage={profileMessage}
+                            openModalProfile={openModalProfile} 
+                            handleClose={setOpenProfile} />
             <SocialNetsButton />
-            <FloatingButton setOpenModal={setOpenModal}/>
+            <FloatingButton setOpenProfile={setOpenProfile}/>
         </div>
     )
 }

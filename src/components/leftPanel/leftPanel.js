@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import './leftPanel.css';
 
 const LeftPanel = ({left, widthScreen, heightScreen, subjects,
-                    setOpenLeft, setOpenModal, showSubject}) => {
+                    setOpenLeft, setOpenDetails, showSubject}) => {
         
     return (
         <div className={`${widthScreen > 600 ? "panel-container-web" : "panel-container-mobile"} ${left ? "open" : ""}`}>
@@ -18,7 +18,7 @@ const LeftPanel = ({left, widthScreen, heightScreen, subjects,
             </div>
             <hr/>
             {subjects.map((s, i) => <Subject key={i} subject={s} widthScreen={widthScreen} 
-                                            setOpenLeft={setOpenLeft} setOpenModal={setOpenModal}
+                                            setOpenLeft={setOpenLeft} setOpenDetails={setOpenDetails}
                                             showSubject={showSubject}/>)}
         </div>
     )
@@ -26,12 +26,12 @@ const LeftPanel = ({left, widthScreen, heightScreen, subjects,
 
 export default LeftPanel;
 
-const Subject = ({subject, widthScreen, setOpenLeft, setOpenModal, showSubject}) => {
+const Subject = ({subject, widthScreen, setOpenLeft, setOpenDetails, showSubject}) => {
 
     const chooseSubject = subject => {
         showSubject(subject)
         setOpenLeft();
-        setOpenModal();
+        setOpenDetails();
     }
 
     return(
