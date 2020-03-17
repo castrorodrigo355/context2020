@@ -1,44 +1,51 @@
 .modal-details-container{
-    /* display: flex;
-    flex-direction: column;
-    position: absolute; */
-    /* border-radius: 80px; */
-    /* height: 280px; */
-}
-
-.MuiDialogTitle-root{
-    padding-bottom: 0 !important;
-    padding-left: 1.5rem !important;
+    height: 30rem;
+    width: 320px;
+    color: white;
+    font-family: cursive;
+    background: #EB5757;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000000, #EB5757);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000000, #EB5757); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .MuiPaper-root{
-    border-radius: 60px !important;
-    /* width: 40% !important; */
-    text-align: center
+    border-radius: 40px !important;
 }
 
-.MuiDialog-paper {
-    margin: 0px !important;
-    position: relative;
-    overflow-y: auto;
+.modal-details-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 15%;
+    padding-left: 5%;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-decoration-line: underline;
 }
 
-.MuiDialog-paperWidthSm {
-    max-width: none !important;
+.modal-details-subtitle{
+    padding-left: 5%;
+    font-weight: 400;
+    text-decoration-line: underline;
+    font-size: 1.2rem;
+}
+
+.modal-details-content{
+    height: 55%;
+    padding-left: 5%;
+    padding-top: 2rem;
 }
 
 .item-class{
-    width: 100%;
     margin-bottom: 5px;
+    font-size: 1.15rem;
+    font-family: 'Times New Roman', Times, serif
 }
 
-h2{
-    font-size: 1.4rem;
-    text-decoration-line: underline;
-}
-
-p{
-    font-weight: 600;
-    text-decoration-line: underline;
-    font-size: 1rem
+.modal-details-footer{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

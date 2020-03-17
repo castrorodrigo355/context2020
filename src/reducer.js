@@ -52,21 +52,21 @@ const state = {
             { id: 5, topic: "Corriente Continua"},
             { id: 6, topic: "Electrostática (Campo Eléctrico)"},
             { id: 7, topic: "Electrostática (Potencial)"},
-            { id: 8, topic: "Calorimetria/ Transferencia De Calor"},
+            { id: 8, topic: "Calorimetria/ Transf. De Calor"},
             { id: 9, topic: "Principios De Termodinámica"},
             { id: 10, topic: "Hidrostática/ Hidrodinámica"}]}
         ,
         { id: 3, hours: 18, name: "Algoritmos", classes: [
             { id: 1, topic: "Compilación/ Funciones/ Ejercicios"},
-            { id: 2, topic: "Estructura Decisión/ Ciclos Iterativos"},
+            { id: 2, topic: "Estruct. Decisión/ Ciclos Iterativos"},
             { id: 3, topic: "Corte De Control/ Ejerc Integradores"},
             { id: 4, topic: "Archivos Y Registros De Lectura"},
             { id: 5, topic: "Vectores/ Creación Y Funciones"},
             { id: 6, topic: "Integracion Archivos Y Vectores"},
             { id: 7, topic: "Matrices E Indexación/ Punteros"},
             { id: 8, topic: "Estructuras Dinámicas/ Listas"},
-            { id: 9, topic: "Funciones Sobre Listas/ Archivos/ Array"},
-            { id: 10, topic: "Estructura DeListas/ Pilas Y Colas"}]}
+            { id: 9, topic: "Integración Listas/ Archivos/ Array"},
+            { id: 10, topic: "Estructura De Pilas Y Colas"}]}
         ,
         { id: 4, hours: 20, name: "Algebra", classes: [
             { id: 1, topic: "Numeros Complejos"},
@@ -74,14 +74,14 @@ const state = {
             { id: 3, topic: "Rectas En El Espacio (R3)"},
             { id: 4, topic: "Matrices Y Determinantes"},
             { id: 5, topic: "Espacios Vectoriales"},
-            { id: 6, topic: "Transformaciones Lineales (Parte 1)"},
-            { id: 7, topic: "Transformaciones Lineales (Parte 2)"},
-            { id: 8, topic: "Conicas (Circulos, Elipses, Parábolas)"},
-            { id: 9, topic: "Autovalores/ Autovectores/ Superficies"},
+            { id: 6, topic: "Transformaciones Lineales (1)"},
+            { id: 7, topic: "Transformaciones Lineales (2)"},
+            { id: 8, topic: "Conicas (Circunf, Elipse, Parábola)"},
+            { id: 9, topic: "Autovalores/ Superficies"},
             { id: 10, topic: "Rototraslacion"}]}
         ,
         { id: 5, hours: 20, name: "Análisis 1", classes: [
-            { id: 1, topic: "Funciones/ Limites De Una Función"},
+            { id: 1, topic: "Funciones Y Limites"},
             { id: 2, topic: "Continudad De Una Función"},
             { id: 3, topic: "Derivadas Primera Parte"},
             { id: 4, topic: "Derivadas Segunda Parte"},
@@ -93,28 +93,28 @@ const state = {
             { id: 10, topic: "Series Y Sucesiones"}]}
         ,
         { id: 6, hours: 20, name: "Análisis 2", classes: [
-            { id: 1, topic: "Ecuaciones Diferenciales/ Curvas"},
+            { id: 1, topic: "Ecuac. Diferenciales/ Curvas"},
             { id: 2, topic: "Limites Y Derivadas en R2"},
-            { id: 3, topic: "Diferenciabilidad Del Campo Escalar"},
-            { id: 4, topic: "Matriz Jacobiana/ Teorema De Schwartz"},
-            { id: 5, topic: "Composición De Funciones/ Derivadas"},
+            { id: 3, topic: "Diferenciabilidad "},
+            { id: 4, topic: "Matriz Jacobiana/ Schwartz"},
+            { id: 5, topic: "Función Compuesta/ Derivadas"},
             { id: 6, topic: "Integrales Dobles/ Areas en R2"},
             { id: 7, topic: "Integrales Dobles/ Areas en R3"},
-            { id: 8, topic: "Trabajo/ Circulación/ Flujo En R2 Y R3"},
+            { id: 8, topic: "Circulación/ Flujo (R2 - R3)"},
             { id: 9, topic: "Integrales Triples Vol/ Masa/ Flujo"},
-            { id: 10, topic: "Ecuaciones Diferenciales/ Extremos"}]}
+            { id: 10, topic: "Ecuac. Diferenciales/ Extremos"}]}
         
         ,
         { id: 7, hours: 20, name: "Física 1", classes: [
-            { id: 1, topic: "Optica Geométrica/ Espejos/ Lentes"},
-            { id: 2, topic: "Cinemática/ Dinámica Sin Rozamiento"},
+            { id: 1, topic: "Optica/ Espejos/ Lentes"},
+            { id: 2, topic: "MRUV/ Dinámica S/ Rozamiento"},
             { id: 3, topic: "Rozamiento Estático Y Dinámico"},
             { id: 4, topic: "Ley Del Trabajo Y La Energia"},
             { id: 5, topic: "Elasticidad Y Energía Mecánica"},
-            { id: 6, topic: "Centro De Masa/ Momento Y Choques"},
+            { id: 6, topic: "Centro De Masa/ Momento Lineal"},
             { id: 7, topic: "Dinámica Del Cuerpo Rígido"},
             { id: 8, topic: "Rodadura Del Cuerpo Rígido"},
-            { id: 9, topic: "Momento Angular Del Cuerpo Rígido"},
+            { id: 9, topic: "Momento Angular Cuerpo Rígido"},
             { id: 10, topic: "Hidrostática/ Hidrodinámica"}]}
         ,
         { id: 8, hours: 22, name: "Física 2", classes: [
@@ -126,7 +126,7 @@ const state = {
             { id: 6, topic: "Flujo Magnético/ Ley De Faraday"},
             { id: 7, topic: "Inductancias/ Solenides/ Toroides"},
             { id: 8, topic: "Circuitos De Corriente Alterna"},
-            { id: 9, topic: "Calorimetría/ Transferencia De Calor"},
+            { id: 9, topic: "Calorimetría/ Transferenc. De Calor"},
             { id: 10, topic: "1er y 2do Principio Termodinámica"}]}
         ]
 }
