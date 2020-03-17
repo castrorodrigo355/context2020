@@ -1,11 +1,35 @@
+.modal-details-container{
+    /* display: flex;
+    flex-direction: column;
+    position: absolute; */
+    /* border-radius: 80px; */
+    /* height: 280px; */
+}
+
+.MuiDialogTitle-root{
+    padding-bottom: 0 !important;
+    padding-left: 1.5rem !important;
+}
+
+.MuiPaper-root{
+    border-radius: 60px !important;
+    /* width: 40% !important; */
+    text-align: center
+}
+
+.MuiDialog-paper {
+    margin: 0px !important;
+    position: relative;
+    overflow-y: auto;
+}
+
+.MuiDialog-paperWidthSm {
+    max-width: none !important;
+}
+
 .item-class{
     width: 100%;
-    padding-left: 6px;
-    padding-top: 2px;
     margin-bottom: 5px;
-    /* background: red; */
-    border: 1px solid #ccc9c9;
-    border-radius: 60px;
 }
 
 h2{
@@ -14,6 +38,7 @@ h2{
 }
 
 p{
-    font-weight: 500;
+    font-weight: 600;
     text-decoration-line: underline;
+    font-size: 1rem
 }

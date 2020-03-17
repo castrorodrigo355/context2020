@@ -13,13 +13,15 @@ const SocialNetsButton = () => {
 
     const actions = [
         {icon: AddIcon, className: `fabmain addIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => handlePanel()},
-        {icon: WhatsAppIcon, className: `fab whatsAppIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => console.log("WHATSAPP")},
-        {icon: InstagramIcon, className: `fab instagramIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => console.log("INSTAGRAM")},
-        {icon: YouTubeIcon, className: `fab youTubeIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => console.log("YOUTUBE")},
-        {icon: FacebookIcon, className: `fab facebookIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => console.log("FACEBOOK")}
+        {icon: WhatsAppIcon, className: `fab whatsAppIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => handleRedirectTo("http://facebook.com")},
+        {icon: InstagramIcon, className: `fab instagramIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => handleRedirectTo("http://instagram.com")},
+        {icon: FacebookIcon, className: `fab facebookIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => handleRedirectTo("http://youtube.com")},
+        // {icon: YouTubeIcon, className: `fab youTubeIcon ${panelFloating ? 'openNets' : ''}`, onClick: () => console.log("YOUTUBE")},
     ]
 
     const handlePanel = () => setPanelFloating(!panelFloating);
+
+    const handleRedirectTo = stringlink => window.location.href = stringlink;
 
     return (
         <div className="social-nets-container">
@@ -34,6 +36,12 @@ const SocialNetsButton = () => {
                     )
                 })
             }
+            {/* <ul>
+                <li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+            </ul> */}
         </div>
     )
 }

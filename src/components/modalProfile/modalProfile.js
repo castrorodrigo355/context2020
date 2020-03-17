@@ -43,7 +43,7 @@ const ModalProfile = ({openModalProfile, handleClose, profileMessage}) => {
                     {
                         topics.map((t, i) => {
                             return(
-                                <div className="item-class" key={i}>
+                                <div className="item-class2" key={i}>
                                     {t}
                                 </div>
                             )
