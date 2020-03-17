@@ -1,5 +1,44 @@
 .modal-profile-container{
+    height: 30rem;
+    width: 320px;
+    color: white;
+    font-family: cursive;
+    background: #000428;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
+.MuiPaper-root{
+    border-radius: 40px !important;
+}
+
+.modal-profile-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 15%;
+    padding-left: 5%;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.modal-profile-subtitle{
+    padding-left: 5%;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.modal-profile-content{
+    height: 55%;
+    padding-left: 5%;
+    padding-top: 2rem;
+}
+
+.item-class{
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif
 }
 
 .item-class2{
@@ -7,6 +46,11 @@
     padding-left: 6px;
     padding-top: 2px;
     margin-bottom: 5px;
-    border: 1px solid #ccc9c9;
-    border-radius: 60px;
+}
+
+.modal-profile-footer{
+    height: 20%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
