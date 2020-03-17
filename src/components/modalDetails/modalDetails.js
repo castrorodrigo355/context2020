@@ -20,6 +20,7 @@ const ModalService = ({openModalDetails, handleClose, selectedCourse}) => {
                         <CloseIcon/>
                     </IconButton>
                 </div>
+                <hr/>
                 <div className="modal-details-subtitle">
                     { selectedCourse && `Estimación: ${selectedCourse.hours} Hrs` }
                 </div>
