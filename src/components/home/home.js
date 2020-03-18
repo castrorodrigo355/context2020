@@ -5,9 +5,9 @@ import ModalDetails from "../modalDetails/modalDetails";
 import FloatingButton from '../floatingButton/floatingButton';
 import LeftPanelButton from '../leftPanelButton/leftPanelButton';
 import SocialNetsButton from '../socialNetsButton/socialNetsButton';
+import ModalProfile from '../modalProfile/modalProfile';
 import MapLeaflet from '../map/map';
 import '../../App.css';
-import ModalProfile from '../modalProfile/modalProfile';
 
 const Home = () => {
 
@@ -51,9 +51,15 @@ const Home = () => {
         !myCourse ? setSelectedCourse(null) : setSelectedCourse(myCourse);
     }
 
+    const setOpenProfile2 = () => {
+        left && setLeft(false);
+        setOpenModalProfile(!openModalProfile)
+    }
+
     return (
         <div className="App">
-            <LeftPanelButton left={left} setOpenLeft={setOpenLeft}/>
+            <LeftPanelButton left={left} 
+                             setOpenLeft={setOpenLeft}/>
             <LeftPanel  left={left} 
                         subjects={subjects} 
                         setOpenLeft={setOpenLeft}
@@ -69,7 +75,7 @@ const Home = () => {
                             openModalProfile={openModalProfile} 
                             handleClose={setOpenProfile} />
             <SocialNetsButton />
-            <FloatingButton setOpenProfile={setOpenProfile}/>
+            <FloatingButton setOpenProfile={setOpenProfile2}/>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import DehazeIcon from '@material-ui/icons/Dehaze';
-import Button from '@material-ui/core/Button';
+// import DehazeIcon from '@material-ui/icons/Dehaze';
+// import Button from '@material-ui/core/Button';
 import './leftPanel.css';
 
 const LeftPanel = ({left, widthScreen, heightScreen, subjects,
@@ -10,11 +10,6 @@ const LeftPanel = ({left, widthScreen, heightScreen, subjects,
         <div className={`${widthScreen > 600 ? "panel-container-web" : "panel-container-mobile"} ${left ? "open" : ""}`}>
             <div className={`${widthScreen > 600 ? "panel-title-web" : "panel-title-mobile"}`}>
                 <div>Materias</div>
-                <div style={{marginRight:"15px"}}>
-                    <Button variant="outlined" color="primary" onClick={setOpenLeft}>
-                        <DehazeIcon />
-                    </Button>
-                </div>
             </div>
             <hr/>
             {subjects.map((s, i) => <Subject key={i} subject={s} widthScreen={widthScreen} 
